@@ -2,5 +2,6 @@
 
 echo $1 | base64 --decode | gpg --import --batch --yes
 
+cd $GITHUB_WORKSPACE
 git secret reveal
 
