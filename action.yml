@@ -1,0 +1,12 @@
+name: 'Git Secret Reveal'
+description: 'Reveal secrets using GPG and git-secret.'
+inputs:
+  key:
+    description: 'Base64 encoded GPG key'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.key }}
+
